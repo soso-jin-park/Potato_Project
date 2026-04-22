@@ -17,79 +17,24 @@
 <br>
 
 ## 🛠️ 기술 스택
-|
- 구분 
-|
- 기술 
-|
-|
-------
-|
-------
-|
-|
- Frontend 
-|
- React, JavaScript, Axios 
-|
-|
- Backend 
-|
- Python, FastAPI 
-|
-|
- Database 
-|
- MySQL 
-|
-|
- 협업 도구 
-|
- Git, GitHub 
-|
+| 구분 | 기술 |
+|------|------|
+| Frontend | React, JavaScript, Axios |
+| Backend | Python, FastAPI |
+| Database | MySQL |
+| 협업 도구 | Git, GitHub |
 ---
 
+
 ## 📱 주요 기능
-|
- 기능 
-|
- 설명 
-|
-|
-------
-|
-------
-|
-|
- 메인 대시보드 
-|
- 재고현황 / 기체 / 알림판 한눈에 확인 
-|
-|
- 재고 현황 
-|
- 전체 부품 재고 조회 및 상태 확인 
-|
-|
- 재고 입출고 
-|
- 부품 입고 / 출고 처리 및 이력 관리 
-|
-|
- 기체 관리 
-|
- 기체 4대 상태 및 정비 주기 확인 
-|
-|
- 비행시간 입력 
-|
- 비행 후 시간 기록 및 정비주기 자동 계산 
-|
-|
- 알림판 
-|
- 재고 부족 / 정비 임박 자동 알림 생성 
-|
+| 기능 | 설명 |
+|------|------|
+| 메인 대시보드 | 재고현황 / 기체 / 알림판 한눈에 확인 |
+| 재고 현황 | 전체 부품 재고 조회 및 상태 확인 |
+| 재고 입출고 | 부품 입고 / 출고 처리 및 이력 관리 |
+| 기체 관리 | 기체 4대 상태 및 정비 주기 확인 |
+| 비행시간 입력 | 비행 후 시간 기록 및 정비주기 자동 계산 |
+| 알림판 | 재고 부족 / 정비 임박 자동 알림 생성 |
 ---
 
 ## 📁 프로젝트 구조
@@ -121,117 +66,29 @@ aviation-maintenance-system/
 ---
 
 ## 🗂️ 데이터베이스 구조
-|
- 테이블 
-|
- 설명 
-|
-|
---------
-|
-------
-|
-|
- aircraft 
-|
- 기체 정보 
-|
-|
- flight_logs 
-|
- 비행시간 기록 
-|
-|
- parts 
-|
- 부품 마스터 
-|
-|
- inventory 
-|
- 재고 현황 
-|
-|
- inventory_transactions 
-|
- 입출고 이력 
-|
-|
- maintenance_schedule 
-|
- 정비 주기 
-|
-|
- alerts 
-|
- 알림 데이터 
-|
+| 테이블 | 설명 |
+|--------|------|
+| aircraft | 기체 정보 |
+| flight_logs | 비행시간 기록 |
+| parts | 부품 마스터 |
+| inventory | 재고 현황 |
+| inventory_transactions | 입출고 이력 |
+| maintenance_schedule | 정비 주기 |
+| alerts | 알림 데이터 |
 ---
 
 ## 🔗 API 목록
-|
- Method 
-|
- URL 
-|
- 설명 
-|
-|
---------
-|
------
-|
-------
-|
-|
- GET 
-|
- /api/aircraft 
-|
- 기체 목록 조회 
-|
-|
- GET 
-|
- /api/aircraft/{id} 
-|
- 기체 상세 조회 
-|
-|
- POST 
-|
- /api/aircraft/{id}/flight-log 
-|
- 비행시간 입력 
-|
-|
- GET 
-|
- /api/inventory 
-|
- 재고 목록 조회 
-|
-|
- POST 
-|
- /api/inventory/transaction 
-|
- 입출고 처리 
-|
-|
- GET 
-|
- /api/alerts 
-|
- 알림 목록 조회 
-|
-|
- PATCH 
-|
- /api/alerts/{id}/status 
-|
- 알림 상태 변경 
-|
+| Method | URL | 설명 |
+|--------|-----|------|
+| GET | /api/aircraft | 기체 목록 조회 |
+| GET | /api/aircraft/{id} | 기체 상세 조회 |
+| POST | /api/aircraft/{id}/flight-log | 비행시간 입력 |
+| GET | /api/inventory | 재고 목록 조회 |
+| POST | /api/inventory/transaction 
+| 입출고 처리 |
+| GET | /api/alerts | 알림 목록 조회 |
+| PATCH | /api/alerts/{id}/status 
+| 알림 상태 변경 |
 ---
 
 ## ⚙️ 설치 및 실행 방법
@@ -318,62 +175,6 @@ db: inventory 테이블 인덱스 추가
 
 ---
 
-## 📅 개발 일정
-|
- 주차 
-|
- DB 
-|
- 백엔드 
-|
- 프론트엔드 
-|
-|
-------
-|
-----
-|
---------
-|
-------------
-|
-|
- 1~2주 
-|
- ERD 및 스키마 설계 
-|
- API 명세 설계 
-|
- 와이어프레임 작성 
-|
-|
- 3~4주 
-|
- DB 구축 및 초기데이터 
-|
- 기체/재고 API 개발 
-|
- 대시보드/목록 구현 
-|
-|
- 5주 
-|
- 외부연동 및 최적화 
-|
- 알림/계산 로직 개발 
-|
- 입출고/알림판 구현 
-|
-|
- 6주 
-|
- 최종 점검 
-|
- 연동 테스트 
-|
- API 연동 및 마무리 
-|
----
 
 ## 📌 참고사항
 - 외부 항공 정비 자재 관리 프로그램 접근 권한 필요
