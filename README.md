@@ -26,6 +26,7 @@
 | Backend | Python, FastAPI |
 | Database | MySQL |
 | 협업 도구 | Git, GitHub |
+
 ---
 
 
